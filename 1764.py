@@ -1,0 +1,8 @@
+n,m=map(int,input().split())
+neverHeared=set()
+neverSeen=set()
+neverHeared.update([input() for _ in range(n)])
+neverSeen.update([input() for _ in range(m)])
+intersect=sorted(neverSeen&neverHeared)
+print(len(intersect))
+print('\n'.join(intersect))
